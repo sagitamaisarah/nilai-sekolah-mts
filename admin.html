@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Manajemen Admin</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<div class="container mt-4">
+    <h3>Manajemen Admin</h3>
+    <a href="?user=Admin&create=Admin" class="btn btn-primary mb-3">
+        <i class="fa fa-plus"></i> Tambah Admin
+    </a>
+    <hr/>
+
+    <!-- Simulasi Data Admin -->
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th style="width: 5%;" class="text-center">No</th>
+                <th>Nama</th>
+                <th>Username</th>
+                <th style="width: 20%;" class="text-center">Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-center">1</td>
+                <td>Nama Admin 1</td>
+                <td>admin1</td>
+                <td class="text-center">
+                    <a href="?user=Admin&edit-admin=1" class="btn btn-warning btn-sm">
+                        <i class="fa fa-edit"></i> Edit
+                    </a>
+                    <a href="?user=Admin&del-admin=1" class="btn btn-danger btn-sm" onclick="return confirm('Hapus admin ini?')">
+                        <i class="fa fa-trash"></i> Hapus
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="text-center">2</td>
+                <td>Nama Admin 2</td>
+                <td>admin2</td>
+                <td class="text-center">
+                    <a href="?user=Admin&edit-admin=2" class="btn btn-warning btn-sm">
+                        <i class="fa fa-edit"></i> Edit
+                    </a>
+                    <a href="?user=Admin&del-admin=2" class="btn btn-danger btn-sm" onclick="return confirm('Hapus admin ini?')">
+                        <i class="fa fa-trash"></i> Hapus
+                    </a>
+                </td>
+            </tr>
+            <!-- Tambahkan baris lainnya sesuai kebutuhan -->
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

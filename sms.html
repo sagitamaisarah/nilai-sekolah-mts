@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simulasi Proses SMS Nilai</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
+    .card { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 0 10px #ccc; max-width: 700px; margin: auto; }
+    h2 { color: #333; }
+    code { background: #eee; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+    .step { margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Simulasi Pemrosesan SMS Nilai</h2>
+
+    <div class="step">
+      <strong>1. Cek SMS Masuk:</strong>
+      <p>Ambil SMS dari tabel <code>inbox</code> yang belum diproses (<code>Processed = false</code>).</p>
+    </div>
+
+    <div class="step">
+      <strong>2. Pecah Isi SMS:</strong>
+      <p>Format SMS bisa:</p>
+      <ul>
+        <li><code>NILAI#NIS#MAPEL#SEMESTER#TAHUN#JENIS</code></li>
+        <li><code>NILAIFULL#NIS#SEMESTER#TAHUN#JENIS</code></li>
+      </ul>
+      <p>Contoh: <code>NILAI#12345#MTK#Ganjil#2023#UTS</code></p>
+    </div>
+
+    <div class="step">
+      <strong>3. Cek ke Database:</strong>
+      <p>Lakukan pencarian ke tabel <code>nilai</code>, join dengan tabel <code>siswa</code>, <code>pelajaran</code>, <code>semester</code>, <code>tahun</code>, dan <code>jenis</code>.</p>
+    </div>
+
+    <div class="step">
+      <strong>4. Hasil & Balasan:</strong>
+      <ul>
+        <li>Jika data ditemukan → Format balasan:</li>
+        <code>Nama: Ahmad | MTK | Semester: Ganjil | UTS | Poin: 85</code>
+        <li>Jika tidak ditemukan → <code>Data Tidak Ditemukan</code></li>
+        <li>Jika format salah → <code>Maaf Perintah Salah</code></li>
+      </ul>
+    </div>
+
+    <div class="step">
+      <strong>5. Kirim Balasan:</strong>
+      <p>Masukkan pesan balasan ke tabel <code>outbox</code> dengan nomor tujuan <code>SenderNumber</code>.</p>
+    </div>
+
+    <div class="step">
+      <strong>6. Tandai SMS sudah diproses:</strong>
+      <p>Update <code>inbox</code> → set <code>Processed = true</code>.</p>
+    </div>
+  </div>
+</body>
+</html>

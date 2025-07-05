@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Manajemen Siswa</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .spacer-bottom-sm {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-4">
+    <h3 class="spacer-bottom-sm">Manajemen Siswa</h3>
+    <a href="#" class="btn btn-primary mb-2">
+        <span class="fa fa-plus"></span> Tambah Siswa
+    </a>
+    <hr/>
+
+    <div class="block-flat no-padding">
+        <div class="content table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-center" style="width: 5%;">No</th>
+                        <th>Nama</th>
+                        <th>NIS</th>
+                        <th>Tempat / Tanggal Lahir</th>
+                        <th>Telepon</th>
+                        <th>Gender</th>
+                        <th>Status</th>
+                        <th>Alamat</th>
+                        <th>Kelas</th>
+                        <th class="text-center" style="width: 15%;">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center">1</td>
+                        <td>Ahmad Zulkifli</td>
+                        <td>20231001</td>
+                        <td>Lombok, 15 Jan 2007</td>
+                        <td>08123456789</td>
+                        <td>Laki-laki</td>
+                        <td>Aktif</td>
+                        <td>Dusun Paok Dandak</td>
+                        <td>Kelas 8A</td>
+                        <td class="text-center">
+                            <a href="#" class="btn btn-warning btn-sm">
+                                <span class="fa fa-edit"></span> Edit
+                            </a>
+                            <a href="#" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus siswa ini?')">
+                                <span class="fa fa-trash"></span> Hapus
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2</td>
+                        <td>Siti Nurhaliza</td>
+                        <td>20231002</td>
+                        <td>Lombok, 3 Mar 2008</td>
+                        <td>08129876543</td>
+                        <td>Perempuan</td>
+                        <td>Aktif</td>
+                        <td>Desa Ketangga</td>
+                        <td>Kelas 8B</td>
+                        <td class="text-center">
+                            <a href="#" class="btn btn-warning btn-sm">
+                                <span class="fa fa-edit"></span> Edit
+                            </a>
+                            <a href="#" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus siswa ini?')">
+                                <span class="fa fa-trash"></span> Hapus
+                            </a>
+                        </td>
+                    </tr>
+                    <!-- Tambahkan baris lain sesuai kebutuhan -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
